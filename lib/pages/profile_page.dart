@@ -30,6 +30,7 @@ class _NewProfilePageState extends State<ProfilePage> {
   @override
   void initState() {
     super.initState();
+    _uploadedImage = widget.profile['profile_picture'] ?? '';
     _nameController = TextEditingController(text: widget.profile['name']);
     _emailController = TextEditingController(text: widget.profile['email']);
     _phoneController = TextEditingController(text: widget.profile['phone']);
@@ -114,8 +115,7 @@ class _NewProfilePageState extends State<ProfilePage> {
                                       textStyle: const TextStyle(
                                           fontWeight: FontWeight.w300,
                                           fontSize: 18.0,
-                                          color: Color.fromRGBO(
-                                              217, 217, 217, 1.0)))),
+                                          color: Color.fromRGBO(255, 238, 205, 1.0)))),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return "Введите URL";
@@ -139,7 +139,7 @@ class _NewProfilePageState extends State<ProfilePage> {
                                   textStyle: const TextStyle(
                                       fontSize: 18.0,
                                       color:
-                                          Color.fromRGBO(217, 217, 217, 1.0))),
+                                      Color.fromRGBO(255, 238, 205, 1.0))),
                               decoration: InputDecoration(
                                   counterText: '',
                                   isDense: true,
@@ -159,8 +159,7 @@ class _NewProfilePageState extends State<ProfilePage> {
                                       textStyle: const TextStyle(
                                           fontWeight: FontWeight.w300,
                                           fontSize: 18.0,
-                                          color: Color.fromRGBO(
-                                              217, 217, 217, 1.0)))),
+                                          color: Color.fromRGBO(255, 238, 205, 1.0)))),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return "Введите Ваши Фамилию и имя!";
@@ -178,8 +177,7 @@ class _NewProfilePageState extends State<ProfilePage> {
                               style: GoogleFonts.sourceSerif4(
                                   textStyle: const TextStyle(
                                       fontSize: 18.0,
-                                      color:
-                                          Color.fromRGBO(217, 217, 217, 1.0))),
+                                      color: Color.fromRGBO(255, 238, 205, 1.0))),
                               decoration: InputDecoration(
                                   counterText: '',
                                   isDense: true,
@@ -199,8 +197,7 @@ class _NewProfilePageState extends State<ProfilePage> {
                                       textStyle: const TextStyle(
                                           fontWeight: FontWeight.w300,
                                           fontSize: 18.0,
-                                          color: Color.fromRGBO(
-                                              217, 217, 217, 1.0)))),
+                                          color: Color.fromRGBO(255, 238, 205, 1.0)))),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return "Введите адрес Вашей эл. почты";
